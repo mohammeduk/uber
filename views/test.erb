@@ -1,0 +1,36 @@
+
+
+
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Table Style</title>
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+  <link rel="stylesheet" type="text/css" href="<%= url('/style.css') %>"/>
+</head>
+
+<body>
+<div class="table-title">
+</div>
+<table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">Item name</th>
+<th class="text-left">Calories</th>
+<th class="text-left">Total Fat</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<% @search_term.each_with_index do |x, i| %>
+<tr>
+<td class="text-left"><%= x["#{i}"][0]["Item Name"] %></td>
+<td class="text-left"><%= x["#{i}"][1]["Calories"] %></td>
+<td class="text-left"><%= x["#{i}"][2]["Total Fat"] %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+
+  </body>

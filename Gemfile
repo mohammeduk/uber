@@ -5,3 +5,4 @@ gem "sinatra"
 gem "pry"
 gem "awesome_print"
 gem "dotenv"
+gem 'mongoid'
